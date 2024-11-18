@@ -2,6 +2,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include <ctype.h>
+
+// Function Prototype
+char gameContinuation();
 
 int main(){
     // number is random generated number; 
@@ -29,11 +33,36 @@ int main(){
         else
         {
             (nguess > 1) ? printf("\nCongrats you have guessed the number after %d attempts!\n", nguess) : printf("\nCongrats you got it in your first try!\n");
+            if (gameContinuation() == 'y') // Game continuation statement
+            {
+                // Generate a random number between 1 to 100 and resetting guess counters
+                srand(time(0));
+                number = rand() % 100 + 1;
+                nguess = 0;
+                guess = -1;
+            }
         }
         
         nguess++;
 
     } while (number != guess);
-       
+    printf("\nExiting the game...\n");
+    
     return 0;
+}
+
+// Function Description
+char gameContinuation()
+{
+    char choice = 'y';
+    do
+    {
+        // Game continuation statement I/p
+        printf("\nDo you want to play again (y/n)?: ");
+        scanf(" %c", &choice);
+
+        choice = tolower(choice); // Convert choice to lowercase
+    } while (choice != 'y' && choice != 'n');
+
+    return choice;
 }
