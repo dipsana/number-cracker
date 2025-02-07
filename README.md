@@ -1,4 +1,4 @@
-#Random-Number-Guessing-Game
+# Random-Number-Guessing-Game
 
 Greeting everyone!
 
