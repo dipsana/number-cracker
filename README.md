@@ -1,66 +1,81 @@
 # 🎯 Number Cracker
 
-**Version:** 1.0.0
-**Language:** C (ISO C99)
-**Platform:** Cross-platform (Windows / Linux / macOS)
-**Executable Size:** ~140 KB
-**Source Code Size:** ~2 KB
+**Version:** 1.0.0  
+**Language:** C (ISO C99)  
+**Platform:** Cross-platform (Windows / Linux / macOS)  
+**Executable Size:** ~140 KB  
+**Source Code Size:** ~2 KB  
 **License:** MIT
 
 ---
 
-## 📘 Overview
+## Overview
 
-**Number Cracker** is a C-based console game that challenges players to guess a random number between **1 and 100**.
-It features **robust input validation**, **attempt tracking**, and an **interactive replay system**, making it a fun and educational mini project for beginners exploring **C programming fundamentals**.
+**Number Cracker** is a C-based console game that challenges players to guess a randomly generated number between **1 and 100**.
 
-This release marks the **base version (v1.0.0)**.
+It features robust input validation, attempt tracking, and an interactive replay system, making it a simple and educational project for beginners exploring C programming fundamentals.
 
-The format is based on [**Keep a Changelog 1.1.0**](https://keepachangelog.com/en/1.1.0/)
-and this project adheres to [**Semantic Versioning 2.0.0**](https://semver.org/).
+This release marks the initial stable version (v1.0.0).
 
----
-
-## ⚙️ Features & Technical Highlights
-
-* 🔢 **Random Number Generation** – Picks a random number between 1 and 100 for each round
-* ✅ **Input Validation** – Detects invalid inputs (non-numeric, out-of-range values)
-* 🧠 **Hint System** – Provides *Higher* or *Lower* clues to guide players
-* 🔄 **Replay Option** – Lets the player continue multiple rounds without restarting
-* 🧮 **Attempt Counter** – Displays total guesses before success
-* 🧱 **Single-File Implementation** – Clean, modular design with simple control flow
-* 💻 **Cross-Platform Compatibility** – Works on Windows, Linux, and macOS
-* ⚡ **Minimal Dependencies** – Standard C library only
+This project follows [Semantic Versioning 2.0.0](https://semver.org/). Its changelog format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
-## 🧱 Installation & Compilation
+## Features & Technical Highlights
+
+- **Random Number Generation** – Generates a random number between 1 and 100 for each round.
+- **Input Validation** – Detects invalid inputs, including non-numeric and out-of-range values.
+- **Hint System** – Provides higher or lower clues to guide players.
+- **Replay Option** – Allows multiple rounds without restarting the application.
+- **Attempt Counter** – Displays the total number of guesses required to find the correct number.
+- **Single-File Implementation** – Uses a simple, modular structure and straightforward control flow.
+- **Cross-Platform Compatibility** – Supports Windows, Linux, and macOS.
+- **Minimal Dependencies** – Uses the standard C library only.
+
+---
+
+## Installation & Compilation
+
+### 1. Clone the repository
 
 ```bash
-# Clone this repository
 git clone https://github.com/dipsana/number-cracker.git
 cd number-cracker
+```
 
-# Compile using GCC
-gcc -o number_cracker main.c
+### 2. Compile using GCC
 
-# Run the executable
+```bash
+gcc -o number_cracker src/main.c
+```
+
+### 3. Run the executable
+
+#### Linux / macOS
+
+```bash
 ./number_cracker
+```
+
+#### Windows
+
+```powershell
+.\number_cracker.exe
 ```
 
 ---
 
-## 🧭 Gameplay Instructions
+## Gameplay Instructions
 
 1. Run the executable in your terminal.
-2. Enter your guess (a number between **1 and 100**).
-3. The program will tell you whether the correct number is **higher** or **lower**.
+2. Enter a guess between **1 and 100**.
+3. Follow the higher or lower hints provided by the program.
 4. Continue guessing until you find the correct number.
-5. You’ll see your **total attempts**, and can choose to play again (`y` or `n`).
+5. View your total attempts and choose whether to play again (`y` or `n`).
 
 ---
 
-## 🧾 Sample Output
+## Sample Output
 
 ```text
 Guess the number between 1 to 100
@@ -98,33 +113,20 @@ Thanks for playing! See you next time...(>w<)
 
 ---
 
-## 🚀 Roadmap / Future Enhancements
+## Roadmap / Future Enhancements
 
-* Add difficulty levels (Easy / Medium / Hard)
-* Implement a leaderboard for best scores
-* Add colored terminal output (ANSI formatting)
-* Include sound effects and animation for wins
-* Convert to GUI (using SDL or Raylib)
-
----
-
-## 🧾 Version History
-
-| Version | Date       | Description             |
-| ------- | ---------- | ----------------------- |
-| 1.0.0   | 2025-10-06 | Base release (SRS done) |
+- Add difficulty levels (Easy / Medium / Hard).
+- Implement a leaderboard for tracking best scores.
+- Introduce colored terminal output using ANSI formatting.
+- Include sound effects and animations for wins.
+- Develop a graphical interface using SDL or Raylib.
 
 ---
 
-## 📜 License
+## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-> *“Precision, patience, and persistence — every guess counts.”* 🎯
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
-**Versioning:** This project adheres to [Semantic Versioning 2.0.0](https://semver.org/).  
-**Changelog Format:** Based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+*Precision, patience, and persistence — every guess counts.*
